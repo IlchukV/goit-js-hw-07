@@ -10,7 +10,7 @@ const imageContainer = document.querySelector(`.gallery`);
 const createImageCardMarkup = (gallery) => gallery.map(({ preview, original, description }) => 
          `<li class="gallery__item">
         <a class="gallery__link" href="${original}">
-        <img class="gallery__image" src="${preview}" data-source="${original}" alt=""${description}"/>
+        <img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}"/>
         </a>
         </li>`
     ).join(``);
@@ -37,7 +37,7 @@ function onImageContainerClick(event) {
 `);
   instance.show();
 
-  galletyRef.addEventListener("keydown", (event) => {
+  imageContainer.addEventListener("keydown", (event) => {
     if (event.code === "Escape") {
       instance.close();
     }
